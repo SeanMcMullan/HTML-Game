@@ -1,0 +1,229 @@
+body{
+    background-image: url("../images/stadium_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-attachment: cover;
+    background-color: #4d74f5;
+    background-size: 100% 100%;
+
+}
+
+/* this now takes up all space it can before the next div in the body 
+means can click literally anywhere on screen to load next player */ 
+.main_body{
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+/* For devices 400px and larger: */
+@media only screen and (max-device-width: 400px) {
+    body {
+        background-image: url("../images/stadium_small_bg.jpg");
+    }
+  }
+
+
+.page_header{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    margin-right: 25%;
+}
+
+
+.page_header_banner{
+    background-image: linear-gradient(to right, rgb(132, 0, 255) , rgba(17, 0, 255, 0.212));
+    margin-left: 50%;
+    display: inline-block;
+}
+
+li {
+    height: 60px;
+    /* removed the bullets */
+    list-style-type: none;
+    list-style: none;
+    /* aligned items */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    /* moved this about the box */
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin: 0;
+    /* Alters the size more than height */
+    padding-top: 10px;
+    zoom: 1;
+    list-style-position:inside;
+    border: thin solid black ;
+    overflow: hidden;
+    display: block;
+}
+
+/* means thick borders dont happen too much */ 
+ul{
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+/* all players */
+.playerListItem {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: red;
+    font-style: bold;
+    font-weight: bold;
+    margin-top: 0;
+    cursor: pointer;
+  }
+
+/* list items places players 1st 2nd 3rd */
+#rank_1{
+    display: inline-block;    
+    font-size: xx-large;
+    align-items: center;
+    color:gold;
+    font-weight: bold;
+    font-style: bold;
+    margin-top: 0;
+}
+
+/*
+#rank_2{
+    display: inline-block;    
+    font-size: x-large;
+    align-items: center;
+    color:silver;
+    margin-top: 0;
+}
+
+#rank_3{
+    display: inline-block;    
+    font-size: large;
+    align-items: center;
+    color:#b08d57;
+    margin-top: 0;
+}
+
+*/
+
+/* animation */
+li {
+    /* hidden off screen and invisible for 2 seconds */
+    transform: translateX(-100%);
+    transition: transform 0.5s, opacity 2s;
+    opacity: 0;
+  }
+
+.show {       
+    /* fully visible */
+    opacity: 1;
+    /* moves back to screen where it would go */
+    transform: translateX(0%);
+}
+
+/* input text boxes */
+input {
+    margin-left: 25%;
+    margin-right: 25%;
+    align-items: center;
+}
+
+/* my div at the foot of page*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(132, 0, 255) , rgba(17, 0, 255, 0.212));
+    display: inline-block;
+    text-align: center;
+ }
+
+/* div holding add player info inputs and buttons*/
+ #fixed-form-container{
+    position: fixed;
+    bottom: 0px;
+    left: 3%;
+    width: 94%;
+    text-align: center;
+    margin: 0;
+}
+
+/* if the button is yet to be clicked the popup is closed so show open icon ie. + */
+#fixed-form-container .button:before { 
+   content: "+ ";
+}
+/* if the button is clicked it opens the window so show close icon ie. - */
+#fixed-form-container .expanded:before { 
+    content: "- ";
+}
+
+/* styling of the open popup add player button*/
+#fixed-form-container .button { 
+  font-size:1.1em; 
+	cursor: pointer;
+	margin-left: auto;
+    margin-right: auto;
+	border: 2px solid #e25454;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px 5px 0px 0px;
+	padding: 5px 20px 5px 20px;
+	background-color: #e25454;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+  -webkit-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+/* pop up window for entering player inormation*/
+#fixed-form-container .body{
+    background-image: linear-gradient(to top, rgb(26, 165, 38) , #00fff2);
+    color: black;
+    font-size: medium;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #e25454;
+    margin-bottom: 16px;
+    padding: 10px; 
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.3);
+}
+
+/* submit button styling*/
+#btnAddPlayer {
+    font-size:1.1em;
+    /* makes more user friendly to click */ 
+	cursor: pointer;
+	margin-left: auto;
+    margin-right: auto;
+	border: 2px solid #e25454;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px 5px 0px 0px;
+	padding: 5px 20px 5px 20px;
+	background-color: #e25454;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+  -webkit-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Leaderboard Assignment</title>
+
+    <!-- Linking to External CSS File -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Referencing JQuery Library Host -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!-- Linking to MY External Js/jQuery File -->
+    <script src="js/leaderboard_logic.js"></script>
+    
+
+</head>
+
+<body>
+    
+    <!-- Click Area-->
+    <div class="main_body">
+        <div class="page_header_banner">
+            <h1 id="main_header" class="page_header">Premier League</h1>
+            <h2 id="sub_header" class="page_header">Top Goal Scorers</h2>
+        </div>
+
+        <!-- My Football Players List-->
+        <ul id="playerUl"></ul>
+    </div>
+
+    <div class="footer">
+        <div id="fixed-form-container">
+          <div class="button">Add Player</div>
+              <div class="body">
+
+                <div>
+                    <label>Player Name: </label>
+                    <input type="text" id="player_name" class="player_name">
+                </div>
+
+                <div>
+                    <label>Player Club: </label>
+                    <select id="player_club" class="player_club">
+
+                        <option value="Arsenal" style="background-image:url('images/club_logos/Arsenal.svg');">Arsenal</option>
+                        <option value="Aston_Villa">Aston Villa</option>
+                        <option value="Brentford">Brentford</option>
+                        <option value="Brighton">Brighton</option>
+                        <option value="Burnley">Burnley</option>
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Crystal_Palace">Crystal Palace</option>
+                        <option value="Everton">Everton</option>
+                        <option value="Leeds">Leeds</option>
+                        <option value="Leicester_City">Leicester City</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Manchester_United">Manchester United</option>
+                        <option value="Manchester_City">Manchester City</option>
+                        <option value="Newcastle_United">Newcastle United</option>
+                        <option value="Norwhich_City">Norwhich City</option>
+                        <option value="Southampton">Southampton</option>
+                        <option value="Spurs">Spurs</option>
+                        <option value="Watford">Watford</option>
+                        <option value="West_Ham_United">West Ham United</option>
+                        <option value="Wolves">Wolves</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Player Goals: </label>
+                    <input type="text" id="player_goals" class="player_goals">
+                </div>
+
+            <button type="submit" class="btnAddPlayer" id="btnAddPlayer">Submit</button>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>
